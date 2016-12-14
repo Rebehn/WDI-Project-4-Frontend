@@ -29,6 +29,10 @@ function Router($stateProvider, $urlRouterProvider) {
       templateUrl: '/templates/login.html',
       controller: 'LoginController as login'
     })
+    .state('landing', {
+      url: '/',
+      templateUrl: '/templates/landing.html'
+    })
     .state('chatrooms', {
       url: '/chatrooms',
       templateUrl: '/templates/chatroomsIndex.html',
@@ -45,5 +49,5 @@ function Router($stateProvider, $urlRouterProvider) {
       controller: 'ChatroomsShowController as chatroomsShow'
     });
 
-  $urlRouterProvider.otherwise('/chatrooms');
+  $urlRouterProvider.otherwise('/');
 }

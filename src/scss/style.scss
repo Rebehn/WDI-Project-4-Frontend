@@ -2,7 +2,6 @@
 
 body {
   font-family: 'Ubuntu', sans-serif;
-  background-color: lightgrey;
 }
 
 //BURGER
@@ -162,5 +161,75 @@ body {
   .status {
     text-align: right;
     height: 20px
+  }
+}
+
+.landing {
+  height: 100vh;
+  color: white;
+  background-color: #3CC47C;
+  div {
+    width: 69%;
+    margin: 0 auto;
+    padding-top: 50%;
+    h1 {
+      font-size: 40px;
+      line-height: 53px;
+    }
+    h3 {
+      font-size: 18px;
+      margin-top: 18px;
+    }
+    button {
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      display: block;
+      text-align: center;
+      width: 140px;
+      margin: 12px auto;
+      padding: 8px 0px;
+    }
+    .signupLanding {
+      margin-top: 70px;
+      background-color: white;
+      color: #3CC47C;
+    }
+    .loginLanding {
+      background-color: #3CC47C;
+      border: 1px solid white;
+      color: white;
+    }
+  }
+}
+
+.login {
+  height: 100vh;
+  .topBar {
+    text-align: right;
+    a {
+      color: #3CC47C;
+      text-decoration: none;
+    }
+  }
+  form div {
+    width: 96vw;
+    margin: 0 auto;
+    input {
+      width: 100%;
+      font-size: 20px;
+      border: none;
+      border-bottom: 1px solid grey;
+      outline: none;
+      color: #3CC47C;
+      -webkit-text-fill-color: black;
+      line-height: 35px;
+      &:focus {
+        border-bottom: 1px solid #3CC47C;
+      }
+    }
+    label {
+      color: lightgrey;
+    }
   }
 }
