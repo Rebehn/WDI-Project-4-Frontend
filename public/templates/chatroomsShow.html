@@ -35,9 +35,8 @@
       </li>
     </ul>
   </div>
-
   <div class="sendBar" ng-controller="MessageController as message">
-    <input ng-model="inputText" />
+    <textarea ng-model="inputText"></textarea>
     <button ng-click="message.sendToMyChannel(inputText)">Send</button>
   </div>
 
