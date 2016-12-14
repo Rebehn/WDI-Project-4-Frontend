@@ -132,9 +132,10 @@ body {
     background-color: darkgrey;
     height: calc(100% - 60px);
     li {
+      text-align: right;
       &.self {
         color: blue;
-        text-align: right;
+        text-align: left;
       }
     }
   }
