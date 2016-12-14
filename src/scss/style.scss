@@ -164,6 +164,7 @@ body {
   }
 }
 
+//LANDING
 .landing {
   height: 100vh;
   color: white;
@@ -203,6 +204,7 @@ body {
   }
 }
 
+//LOGIN
 .login {
   height: 100vh;
   .topBar {
@@ -220,7 +222,6 @@ body {
     margin: 10px 0 50px 3vw;
   }
   form {
-    height: calc(100vh - 161px);
     div {
       width: 94vw;
       margin: 0 auto;
@@ -259,5 +260,64 @@ body {
       padding: 6px 14px;
       border-radius: 3px;
     }
+  }
+}
+
+//REGISTER
+.register {
+  .topBar {
+    text-align: right;
+    padding-top: 20px;
+    margin-bottom: 40px;
+    a {
+      color: #3CC47C;
+      text-decoration: none;
+      margin-right: 30px;
+    }
+  }
+  h3 {
+    font-size: 24px;
+    margin: 10px 0 20px 3vw;
+    color: #1E392A;
+  }
+  form {
+    div {
+      width: 94vw;
+      margin: 0 auto;
+      input {
+        width: 100%;
+        font-size: 20px;
+        border: none;
+        border-bottom: 1px solid grey;
+        outline: none;
+        color: #3CC47C;
+        -webkit-text-fill-color: black;
+        line-height: 35px;
+        margin-bottom: 20px;
+        &:focus {
+          border-bottom: 1px solid #3CC47C;
+        }
+      }
+      label {
+        color: lightgrey;
+        font-size: 12px;
+      }
+    }
+  }
+  hr {
+    position: absolute;
+    bottom: 36px;
+    width: 100%;
+  }
+  button {
+    position: absolute;
+    bottom: 8px;
+    right: 12px;
+    border: none;
+    background-color: #3CC47C;
+    color: white;
+    font-size: 14px;
+    padding: 6px 14px;
+    border-radius: 3px;
   }
 }

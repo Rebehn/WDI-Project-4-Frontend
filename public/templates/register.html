@@ -1,22 +1,28 @@
 <section>
-  <form novalidate ng-submit="register.submit()">
-    <div>
-      <label>Username</label>
-      <input type="text" placeholder="Username" ng-model="register.user.username">
+  <div class="register">
+    <div class="topBar">
+      <a ui-sref="login">Log in</a>
     </div>
-    <div>
-      <label>Email</label>
-      <input type="email" placeholder="Email" ng-model="register.user.email">
-    </div>
-    <div>
-      <label>Password</label>
-      <input type="password" placeholder="Password" ng-model="register.user.password">
-    </div>
-    <div>
-      <label>Password Confirmation</label>
-      <input type="password" placeholder="Password Confirmation" ng-model="register.user.password_confirmation">
-    </div>
-
-    <button style="background: teal">Register</button>
-  </form>
+    <h3>Please enter your details.</h3>
+    <form novalidate ng-submit="register.submit()">
+      <div>
+        <label>Username</label>
+        <input type="text" ng-model="register.user.username">
+      </div>
+      <div>
+        <label>Email</label>
+        <input type="email" ng-model="register.user.email">
+      </div>
+      <div>
+        <label>Password</label>
+        <input type="password" ng-model="register.user.password">
+      </div>
+      <div>
+        <label>Password Confirmation</label>
+        <input type="password" ng-model="register.user.password_confirmation">
+      </div>
+      <hr>
+      <button>Register</button>
+    </form>
+  </div>
 </section>
