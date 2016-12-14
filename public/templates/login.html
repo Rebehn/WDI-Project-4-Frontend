@@ -1,9 +1,9 @@
 <section>
   <div class="login">
     <div class="topBar">
-      <a href="register">Sign up</a>
+      <a ui-sref="register">Sign up</a>
     </div>
-    <h1>Log in to Talkr</h1>
+    <h1>Log in to Talkr.</h1>
     <form novalidate ng-submit="login.submit()">
       <div>
         <label>Email</label>
@@ -14,7 +14,7 @@
         <input type="password" ng-model="login.credentials.password">
       </div>
       <hr>
-      <button>Login</button>
+      <button>Log in</button>
     </form>
   </div>
 </section>
