@@ -1,0 +1,15 @@
+<h1>Add chat room</h1>
+
+<form ng-submit="chatroomsNew.submit()">
+  <div class="form-group">
+    <label for="title">Title</label>
+    <input type="text" id="title" name="title" ng-model="chatroomsNew.chatroom.title">
+  </div>
+
+  <div class="form-group">
+    <label for="private">Private?</label>
+    <input type="checkbox" id="private" name="private" ng-model="chatroomsNew.chatroom.private">
+  </div> Is private = {{ chatroomsNew.chatroom.private }}
+
+  <button>Add!</button>
+</form>

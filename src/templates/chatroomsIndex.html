@@ -1,0 +1,14 @@
+<section>
+  <h1>Public chat rooms</h1>
+
+  <button id="newChatroomButton" ui-sref="chatroomsNew">New Chat Room</button>
+
+  <ul>
+    <li ng-repeat="chatroom in chatroomsIndex.all">
+      <div style="border: 1px black solid" ng-if="chatroomsIndex.hasAccess(chatroom)">
+        {{ chatroom.title }}
+        <button ui-sref="chatroomsShow({ id: chatroom.id })">Enter</button>
+      </div>
+    </li>
+  </ul>
+</section>

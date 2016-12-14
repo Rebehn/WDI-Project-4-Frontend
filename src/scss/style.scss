@@ -1,0 +1,151 @@
+@import "reset";
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  background-color: lightgrey;
+}
+
+//BURGER
+.burger {
+  display: inline-block;
+  border: 0;
+  background: none;
+  outline: 0;
+  padding: 0;
+  cursor: pointer;
+  border-bottom: 4px solid currentColor;
+  width: 28px;
+  transition: border-bottom 1s ease-in-out;
+  -webkit-transition: border-bottom 1s ease-in-out;
+}
+.burger::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+.burger:before {
+  content: "";
+  display: block;
+  border-bottom: 4px solid currentColor;
+  width: 100%;
+  margin-bottom: 5px;
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+}
+
+.burger:after {
+  content: "";
+  display: block;
+  border-bottom: 4px solid currentColor;
+  width: 100%;
+  margin-bottom: 5px;
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+}
+
+.burger-check {
+  display: none;
+}
+
+.burger-check:checked ~ .burger {
+  border-bottom: 4px solid transparent;
+  transition: border-bottom 0.8s ease-in-out;
+  -webkit-transition: border-bottom 0.8s ease-in-out;
+}
+.burger-check:checked ~ .burger:before {
+  transform: rotate(-405deg) translateY(1px) translateX(-3px);
+  -webkit-transform: rotate(-405deg) translateY(1px) translateX(-3px);
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+}
+.burger-check:checked ~ .burger:after {
+  transform: rotate(405deg) translateY(-4px) translateX(-5px);
+  -webkit-transform: rotate(405deg) translateY(-4px) translateX(-5px);
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+}
+
+
+.navigation {
+  position: absolute;
+  z-index: 1;
+  overflow: hidden;
+  width: 100%;
+  margin-top: 10px;
+  margin-left: -10px;
+  max-height: 0;
+  -webkit-transition: max-height 0.5s ease-in-out;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.burger-check:checked ~ .navigation {
+  max-height: 500px;
+  -webkit-transition: max-height 0.5s ease-in-out;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.navBox {
+  background-color: pink;
+  padding: 14px 10px 10px 10px;
+  nav {
+    text-align: center;
+    li {
+      padding: 12px 0;
+      a {
+        text-decoration: none;
+      }
+    }
+    li:nth-child(2n+1) {
+      background-color: black;
+      a {
+        color: white;
+      }
+    }
+    li:nth-child(2n) {
+      background-color: grey;
+      a {
+        color: black;
+      }
+    }
+  }
+}
+
+//CHATROOM
+.chatroomHolder {
+  background-color: lightyellow;
+  width: 97%;
+  height: 92vh;
+  margin: auto;
+  h1 {
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+  }
+  .messages {
+    background-color: darkgrey;
+    height: calc(100% - 60px);
+    li {
+      &.self {
+        color: blue;
+        text-align: right;
+      }
+    }
+  }
+  .sendBar {
+    input {
+      width: 80%;
+      margin-bottom: 4px;
+    }
+  }
+  .status {
+    text-align: right;
+    height: 20px
+  }
+}

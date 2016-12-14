@@ -1,0 +1,51 @@
+<div class="chatroomHolder">
+  <h1>{{ chatroomsShow.chatroom.title }}</h1>
+  {{ chatroomsShow.chatroom.allowed_user_ids }}
+  <button ng-if="true" ng-click="chatroomsShow.show = !chatroomsShow.show" style="background: red">+</button>
+  <div ng-show="chatroomsShow.show">
+    <div class="chatroomUserList">
+      <h1>Users in chat</h1>
+      <ul>
+        <li ng-repeat="user in chatroomsShow.all" ng-if="chatroomsShow.showOnInChatList(user)">
+          {{ user.username }}
+          <button ng-click="chatroomsShow.revokePrivilege(user)" style="background: lime">-</button>
+        </li>
+      </ul>
+    </div>
+    <div class="userList">
+      <h1>Other Users</h1>
+      <div>
+        <input type="text" ng-model="chatroomsShow.filter.username" placeholder="Search">
+        <ul>
+          <li ng-repeat="user in chatroomsShow.all | filter: chatroomsShow.filter" ng-if="chatroomsShow.showOnAllList(user)">
+            <div class="profileBox">
+              <a ui-sref="usersShow({ id: user.id })">{{ user.username }}</a>
+              <button ng-click="chatroomsShow.allowUser(user)" style="background: maroon">+</button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="messages">
+    <ul class="messagesNew" ng-controller="MessageController as message">
+      <li ng-repeat="datum in message.myData" ng-class="{ self: message.isOwnMessage(datum)}">
+        {{ datum.body }}
+      </li>
+    </ul>
+  </div>
+
+  <div class="sendBar" ng-controller="MessageController as message">
+    <input ng-model="inputText" />
+    <button ng-click="message.sendToMyChannel(inputText)">Send</button>
+  </div>
+
+  <div class="status" ng-controller="StatusController as status">
+    <h4>
+      <span ng-show="status.status.connected">✓ Connected</span>
+      <span ng-show="status.status.disconnected">✘ Disconnected</span>
+      <span ng-show="status.status.connecting">✘ Connecting......</span>
+    </h4>
+  </div>
+</div>

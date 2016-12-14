@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="finalProject">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="action-cable-url" content="ws://localhost:3000/cable"/>
+    <title>Final Project</title>
+    <link rel="stylesheet" href="/css/vendor.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/vendor.js" charset="utf-8"></script>
+    <script src="/js/app.js" charset="utf-8"></script>
+  </head>
+  <body ng-controller="MainController as main">
+    <div class="navBox">
+      <input class="burger-check" id="burger-check" type="checkbox" ng-model="main.burgerOpen">
+      <label for="burger-check" class="burger"></label>
+      <nav id="navigation1" class="navigation">
+        <ul>
+          <li><a ui-sref="usersIndex">Users</a></li>
+          <li><a ui-sref="chatrooms">Chatrooms</a></li>
+          <li><a ui-sref="login">Login</a></li>
+          <li><a ui-sref="register">Register</a></li>
+        </ul>
+      </nav>
+    </div>
+    <main ui-view></main>
+  </body>
+</html>
