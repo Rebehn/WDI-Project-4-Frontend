@@ -1,5 +1,6 @@
 angular.module('finalProject', ['ngResource', 'ui.router', 'satellizer', 'ngActionCable'])
   // .constant('API_URL', 'https://limitless-headland-58759.herokuapp.com/api')
+  // .constant('API_URL', 'http://10.1.6.67:3000/api')
   .constant('API_URL', 'http://localhost:3000/api')
   .config(Auth)
   .run(ActionCable);

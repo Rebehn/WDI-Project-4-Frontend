@@ -3,6 +3,12 @@
 body {
   font-family: 'Ubuntu', sans-serif;
 }
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
 
 //BURGER
 .burger {

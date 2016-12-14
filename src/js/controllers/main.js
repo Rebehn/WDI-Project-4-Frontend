@@ -4,10 +4,9 @@ angular.module('finalProject')
 MainController.$inject = ['$rootScope', '$auth', '$state'];
 function MainController($rootScope, $auth, $state) {
   const main = this;
-  const protectedStates = ['usersEdit'];
+  const protectedStates = ['usersEdit', 'usersIndex', 'usersShow', 'chatroomsIndex', 'chatroomsNew', 'chatrooms'];
 
   function secureState(e, toState, toParams) {
-
     main.burgerOpen = false;
     if((!$auth.isAuthenticated() &&
     protectedStates.includes(toState.name)) ||
@@ -19,10 +18,11 @@ function MainController($rootScope, $auth, $state) {
 
   function logout() {
     $auth.logout();
-    $state.go('register');
+    $state.go('login');
   }
-
   main.logout = logout;
+
+  main.isLoggedIn = $auth.isAuthenticated;
 
   $rootScope.$on('$stateChangeStart', secureState);
 }

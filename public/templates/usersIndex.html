@@ -6,6 +6,7 @@
       <li ng-repeat="user in usersIndex.all | filter: usersIndex.filter" ng-if="!usersIndex.isSelf(user)">
         <div class="profileBox">
           <a ui-sref="usersShow({ id: user.id })">{{ user.username }}</a>
+          <img src="{{ user.image }}" alt="Image of {{ user.username }}">
         </div>
       </li>
     </ul>
