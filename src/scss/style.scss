@@ -538,24 +538,57 @@ button:focus {
 
 //USERS INDEX
 .usersIndex {
-  img {
-    width: 20px;
+  width: 94vw;
+  margin: 0 auto;
+  height: calc(100vh - 50px);
+  h1 {
+    font-size: 4vh;
+    padding-top: 4vh;
+    margin: 0 0 2vh 3vw;
   }
-  div {
-    width: 94vw;
-    margin: 0 auto;
-    input {
-      width: 100%;
-      font-size: 20px;
-      border: none;
-      border-bottom: 1px solid grey;
-      outline: none;
-      color: $main-color;
-      -webkit-text-fill-color: black;
-      line-height: 35px;
-      margin-bottom: 20px;
-      &:focus {
-        border-bottom: 1px solid $main-color;
+  label {
+    color: lightgrey;
+    font-size: 12px;
+  }
+  input {
+    width: 100%;
+    font-size: 20px;
+    border: none;
+    border-bottom: 1px solid grey;
+    outline: none;
+    color: $main-color;
+    -webkit-text-fill-color: black;
+    line-height: 35px;
+    margin-bottom: 20px;
+    &:focus {
+      border-bottom: 1px solid $main-color;
+    }
+  }
+  .userListFlex {
+    display: flex;
+    overflow-y: scroll;
+    height: 60vh;
+    ul li {
+      width: 29vw;
+      margin: 0 1vw;
+      float: left;
+      .profileBox {
+        margin-bottom: 0.75vh;
+        a {
+          text-decoration: none;
+          margin-left: 3px;
+          h4 {
+            text-align: center;
+            color: darken($main-color, 20%);
+          }
+          img {
+            border-radius: 50%;
+            // border: 2px solid darken($main-color, 10%);
+            width: 26vw;
+            height: 26vw;
+            object-fit: cover;
+          }
+        }
       }
     }
   }
