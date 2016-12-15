@@ -1,14 +1,16 @@
 <section>
-  <h1>Other Users</h1>
-  <div>
-    <input type="text" ng-model="usersIndex.filter.username" placeholder="Search">
-    <ul>
-      <li ng-repeat="user in usersIndex.all | filter: usersIndex.filter" ng-if="!usersIndex.isSelf(user)">
-        <div class="profileBox">
-          <a ui-sref="usersShow({ id: user.id })">{{ user.username }}</a>
-          <img src="{{ user.image }}" alt="Image of {{ user.username }}">
-        </div>
-      </li>
-    </ul>
+  <div class="usersIndex">
+    <h1>See who's talkn.</h1>
+    <div>
+      <input type="text" ng-model="usersIndex.filter.username" placeholder="Search">
+      <ul>
+        <li ng-repeat="user in usersIndex.all | filter: usersIndex.filter" ng-if="!usersIndex.isSelf(user)">
+          <div class="profileBox">
+            <a ui-sref="usersShow({ id: user.id })">{{ user.username }}</a>
+            <img src="{{ user.image }}" alt="Image of {{ user.username }}">
+          </div>
+        </li>
+      </ul>
+    </div>
   </div>
 </section>

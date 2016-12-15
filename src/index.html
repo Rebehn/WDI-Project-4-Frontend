@@ -26,6 +26,7 @@
           <li><a ng-click="main.logout()">Logout</a></li>
         </ul>
       </nav>
+      <a ui-sref="usersShow({ id: main.currentUser.id })"><img id="navbarPic" src="{{ main.currentUser.image }}" alt="Image of {{ main.currentUser }}"></a>
     </div>
     <main ui-view></main>
   </body>

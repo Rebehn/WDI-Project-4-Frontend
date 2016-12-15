@@ -100,6 +100,7 @@ button:focus {
 .navBox {
   background-color: $main-color;
   padding: 14px 10px 10px 10px;
+  position: relative;
   nav {
     text-align: center;
     li {
@@ -120,6 +121,17 @@ button:focus {
         color: black;
       }
     }
+  }
+  #navbarPic {
+    width: 10vw;
+    height: 10vw;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    object-fit: cover;
+    position: absolute;
+    right: 4vw;
+    top: 27px;
+    z-index: 2;
   }
 }
 
@@ -170,21 +182,34 @@ button:focus {
     height: 20px
   }
 }
+
 //CHATTOOMS INDEX
 .chatroomsIndex {
   height: calc(100vh - 48px);
   font-size: 20px;
   background-color: lighten($main-color, 45%);
   h1 {
-    padding-top: 10px;
-    font-size: 25px;
-    margin: 0 0 10px 3vw;
+    padding-top: 4vh;
+    font-size: 4vh;
+    margin: 0 0 4vh 3vw;
   }
+  #newChatBtn {
+    background-color: lighten($main-color, 15%);
+    border: none;
+    border-radius: 6px;
+    padding: 6px 2px;
+    width: 140px;
+    margin: 12px auto;
+    display: block;
+    color: white;
+    font-size: 2vh
+  }
+
   .chatListFlex {
     display: flex;
     flex-direction: column;
     overflow-y: scroll;
-    height: 30vh;
+    height: 28vh;
     margin: 0 4vw;
     padding: 3vw;
     background-color: white;
@@ -217,8 +242,6 @@ button:focus {
         }
       }
     }
-  }
-  button {
   }
 }
 
@@ -510,5 +533,30 @@ button:focus {
     padding: 6px 14px;
     border-radius: 3px;
     background-color: $main-color;
+  }
+}
+
+//USERS INDEX
+.usersIndex {
+  img {
+    width: 20px;
+  }
+  div {
+    width: 94vw;
+    margin: 0 auto;
+    input {
+      width: 100%;
+      font-size: 20px;
+      border: none;
+      border-bottom: 1px solid grey;
+      outline: none;
+      color: $main-color;
+      -webkit-text-fill-color: black;
+      line-height: 35px;
+      margin-bottom: 20px;
+      &:focus {
+        border-bottom: 1px solid $main-color;
+      }
+    }
   }
 }

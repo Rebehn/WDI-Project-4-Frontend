@@ -1,8 +1,8 @@
 angular.module('finalProject')
   .controller('MainController', MainController);
 
-MainController.$inject = ['$rootScope', '$auth', '$state'];
-function MainController($rootScope, $auth, $state) {
+MainController.$inject = ['$rootScope', '$auth', '$state', 'User'];
+function MainController($rootScope, $auth, $state, User) {
   const main = this;
   const protectedStates = ['usersEdit', 'usersIndex', 'usersShow', 'chatroomsIndex', 'chatroomsNew', 'chatrooms'];
 
@@ -23,6 +23,8 @@ function MainController($rootScope, $auth, $state) {
   main.logout = logout;
 
   main.isLoggedIn = $auth.isAuthenticated;
+
+  main.currentUser = User.get({id: $auth.getPayload().id });
 
   $rootScope.$on('$stateChangeStart', secureState);
 }
