@@ -7,7 +7,12 @@ function MainController($rootScope, $auth, $state, User) {
   const protectedStates = ['usersEdit', 'usersIndex', 'usersShow', 'chatroomsIndex', 'chatroomsNew', 'chatrooms'];
 
   function secureState(e, toState, toParams) {
+    const payload = $auth.getPayload();
     main.burgerOpen = false;
+    if (payload) {
+      main.currentUser = User.get({ id: payload.id });
+    }
+
     if((!$auth.isAuthenticated() &&
     protectedStates.includes(toState.name)) ||
     toState.name === 'usersEdit' && (parseFloat(toParams.id) !== $auth.getPayload().id)) {
@@ -23,8 +28,6 @@ function MainController($rootScope, $auth, $state, User) {
   main.logout = logout;
 
   main.isLoggedIn = $auth.isAuthenticated;
-
-  main.currentUser = User.get({id: $auth.getPayload().id });
 
   $rootScope.$on('$stateChangeStart', secureState);
 }
