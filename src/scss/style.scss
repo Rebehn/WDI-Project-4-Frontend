@@ -81,7 +81,7 @@ button:focus {
 
 .navigation {
   position: absolute;
-  z-index: 1;
+  z-index: 10;
   overflow: hidden;
   width: 100%;
   margin-top: 10px;
@@ -110,15 +110,15 @@ button:focus {
       }
     }
     li:nth-child(2n+1) {
-      background-color: black;
+      background-color: lighten($main-color, 38%);
       a {
-        color: white;
+        color: black;
       }
     }
     li:nth-child(2n) {
-      background-color: grey;
+      background-color: lighten($main-color, 33%);
       a {
-        color: black;
+        color: white;
       }
     }
   }
@@ -131,24 +131,51 @@ button:focus {
     position: absolute;
     right: 4vw;
     top: 27px;
-    z-index: 2;
+    z-index: 11;
   }
 }
 
 //CHATROOM
 .chatroomHolder {
-  background-color: lightyellow;
-  width: 97%;
-  height: 92vh;
-  margin: auto;
+  width: 94vw;
+  margin: 0 auto;
+  height: calc(100vh - 48px);
+  position: relative;
   h1 {
     text-align: center;
     font-size: 25px;
     font-weight: bold;
+    padding-top: 10px;
+  }
+  .addOrSeeUsers {
+    h1 {
+      font-size: 18px;
+    }
+    .midBox {
+      position: absolute;
+      z-index: 1;
+      top: 9vh;
+      left: 1px;
+      width: 93vw;
+      height: calc(100vh - 188px);
+      background-color: lighten($main-color, 45%);
+    }
+    #showOrHideButton {
+      position: absolute;
+      right: 3vw;
+      top: 8vh;
+      border-radius: 50%;
+      border: none;
+      padding: 4px 7px;
+      z-index: 2;
+      background-color: lighten($main-color, 30%);
+      color: white;
+    }
   }
   .messages {
-    background-color: darkgrey;
-    height: calc(100% - 160px);
+    background-color: lighten($main-color, 45%);
+    border: 1px solid lighten($main-color, 30%);
+    border-radius: 8px;
     display: flex;
     flex-direction: column-reverse;
     position: relative;
@@ -156,30 +183,77 @@ button:focus {
     margin-top: 15px;
     overflow-y: scroll;
     margin-bottom: 15px;
+    height: calc(100vh - 170px);
     li {
-      text-align: right;
+      .wholeLine {
+        width: 94vw;
+        min-height: 39px;
+        display: block;
+        .singleMessageBox {
+          color: white;
+          background-color: darken($main-color, 5%);
+          margin-bottom: 1vh;
+          margin-left: 1vw;
+          border-radius: 6px;
+          padding: 7px 10px;
+          max-width: 70vw;
+          float: left;
+          h6 {
+            font-size: 8px;
+            font-style: italic;
+            color: lightgrey;
+          }
+        }
+      }
       &.self {
-        color: blue;
-        text-align: left;
+        color: white;
+        .singleMessageBox {
+          background-color: $main-color;
+          margin-bottom: 1vh;
+          margin-right: 1.5vw;
+          float: right;
+          border-radius: 6px;
+          padding: 7px 10px;
+          max-width: 70vw;
+          h6 {
+            font-size: 8px;
+            font-style: italic;
+            color: lightgrey;
+          }
+        }
       }
     }
   }
   .sendBar {
-    textarea {
-      width: 96%;
+    input {
       margin-bottom: 4px;
-      height: 50px;
-      border: 1px solid #ccc;
+      border: 1px solid $main-color;
       border-radius: 5px;
       resize: none;
-      padding: 5px 8px;
+      padding: 5px 1vw;
       outline: none;
-      color: #666;
+      position: absolute;
+      font-size: 14px;
+      width: 71vw;
+      left: 1vw;
+      bottom: 14px;
+    }
+    button {
+      background-color: $main-color;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      padding: 8px 16px;
+      position: absolute;
+      right: 1vw;
+      bottom: 18px;
     }
   }
   .status {
-    text-align: right;
-    height: 20px
+    position: absolute;
+    bottom: 0.5vh;
+    right: 3vw;
+    font-size: 8px;
   }
 }
 
