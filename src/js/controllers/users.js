@@ -24,12 +24,21 @@ function UsersShowController(User, $state, $auth) {
   const usersShow = this;
 
   function isCurrentUser() {
-    return $auth.getPayload().id === Number($state.params.id);
+    const authPayload = $auth.getPayload();
+    return authPayload && (authPayload.id === Number($state.params.id));
   }
 
   usersShow.isCurrentUser = isCurrentUser;
 
   usersShow.user = User.get($state.params);
+
+  function remove() {
+    usersShow.user.$remove(() => {
+      $auth.logout();
+      $state.go('landing');
+    });
+  }
+  usersShow.remove = remove;
 }
 
 UsersEditController.$inject = ['User', '$state'];
@@ -39,7 +48,6 @@ function UsersEditController(User, $state) {
   usersEdit.user = User.get($state.params);
 
   function submit() {
-    console.log(usersEdit.user);
     usersEdit.user.$update(() => {
       $state.go('usersShow', { id: usersEdit.user.id });
     });

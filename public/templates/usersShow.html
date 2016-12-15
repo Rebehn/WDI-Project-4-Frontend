@@ -7,6 +7,6 @@
   	<h4>{{ usersShow.user.email }}</h4>
 
     <button class="edit" ui-sref="usersEdit({ id: usersShow.user.id })" ng-if="usersShow.isCurrentUser()">Edit</button>
-    <button class="delete" ng-if="usersShow.isCurrentUser()">Delete</button>
+    <button class="delete" ng-click="usersShow.remove()" ng-if="usersShow.isCurrentUser()">Delete</button>
   </div>
 </section>

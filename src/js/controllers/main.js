@@ -18,7 +18,7 @@ function MainController($rootScope, $auth, $state) {
 
   function logout() {
     $auth.logout();
-    $state.go('login');
+    $state.go('landing');
   }
   main.logout = logout;
 

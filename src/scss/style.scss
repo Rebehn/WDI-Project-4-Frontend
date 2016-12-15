@@ -1,5 +1,7 @@
 @import "reset";
 
+$main-color: #3CC47C;
+
 body {
   font-family: 'Ubuntu', sans-serif;
 }
@@ -96,7 +98,7 @@ button:focus {
 }
 
 .navBox {
-  background-color: #3CC47C;
+  background-color: $main-color;
   padding: 14px 10px 10px 10px;
   nav {
     text-align: center;
@@ -168,12 +170,20 @@ button:focus {
     height: 20px
   }
 }
+//CHATTOOMS INDEX
+.chatroomsIndex {
+  height: calc(100vh - 48px);
+  h1 {
+    font-size: 25px;
+    margin: 10px 0 10px 3vw;
+  }
+}
 
 //LANDING
 .landing {
   height: 100vh;
   color: white;
-  background-color: #3CC47C;
+  background-color: $main-color;
   div {
     width: 69%;
     margin: 0 auto;
@@ -199,10 +209,10 @@ button:focus {
     .signupLanding {
       margin-top: 70px;
       background-color: white;
-      color: #3CC47C;
+      color: $main-color;
     }
     .loginLanding {
-      background-color: #3CC47C;
+      background-color: $main-color;
       border: 1px solid white;
       color: white;
     }
@@ -217,7 +227,7 @@ button:focus {
     padding-top: 20px;
     margin-bottom: 40px;
     a {
-      color: #3CC47C;
+      color: $main-color;
       text-decoration: none;
       margin-right: 30px;
     }
@@ -236,12 +246,12 @@ button:focus {
         border: none;
         border-bottom: 1px solid grey;
         outline: none;
-        color: #3CC47C;
+        color: $main-color;
         -webkit-text-fill-color: black;
         line-height: 35px;
         margin-bottom: 20px;
         &:focus {
-          border-bottom: 1px solid #3CC47C;
+          border-bottom: 1px solid $main-color;
         }
       }
       label {
@@ -259,7 +269,7 @@ button:focus {
       bottom: 8px;
       right: 12px;
       border: none;
-      background-color: #3CC47C;
+      background-color: $main-color;
       color: white;
       font-size: 14px;
       padding: 6px 14px;
@@ -275,7 +285,7 @@ button:focus {
     padding-top: 20px;
     margin-bottom: 40px;
     a {
-      color: #3CC47C;
+      color: $main-color;
       text-decoration: none;
       margin-right: 30px;
     }
@@ -295,12 +305,12 @@ button:focus {
         border: none;
         border-bottom: 1px solid grey;
         outline: none;
-        color: #3CC47C;
+        color: $main-color;
         -webkit-text-fill-color: black;
         line-height: 35px;
         margin-bottom: 20px;
         &:focus {
-          border-bottom: 1px solid #3CC47C;
+          border-bottom: 1px solid $main-color;
         }
       }
       label {
@@ -319,7 +329,7 @@ button:focus {
     bottom: 8px;
     right: 12px;
     border: none;
-    background-color: #3CC47C;
+    background-color: $main-color;
     color: white;
     font-size: 14px;
     padding: 6px 14px;
@@ -337,7 +347,7 @@ button:focus {
     width: 242px;
     img {
       border-radius: 50%;
-      // border: 1px #3CC47C solid;
+      // border: 1px $main-color solid;
       width: 240px;
       height: 240px;
       object-fit: cover;
@@ -358,7 +368,7 @@ button:focus {
   }
   .edit {
     left: 12px;
-    background-color: #3CC47C;
+    background-color: $main-color;
   }
   .delete {
     right: 12px;
@@ -376,7 +386,7 @@ button:focus {
     width: 242px;
     img {
       border-radius: 50%;
-      // border: 1px #3CC47C solid;
+      // border: 1px $main-color solid;
       width: 240px;
       height: 240px;
       object-fit: cover;
@@ -393,7 +403,7 @@ button:focus {
     padding: 6px 14px;
     border-radius: 3px;
     position: absolute;
-    background-color: #3CC47C;
+    background-color: $main-color;
     bottom: 10%;
     left: 40%;
   }
@@ -406,12 +416,12 @@ button:focus {
       border: none;
       border-bottom: 1px solid grey;
       outline: none;
-      color: #3CC47C;
+      color: $main-color;
       -webkit-text-fill-color: black;
       line-height: 35px;
       margin-bottom: 20px;
       &:focus {
-        border-bottom: 1px solid #3CC47C;
+        border-bottom: 1px solid $main-color;
       }
     }
     #imageUrlInput {
@@ -423,32 +433,39 @@ button:focus {
 //CHATROOMS NEW
 .chatroomsNew {
   height: calc(100vh - 50px);
-  text-align: center;
-  button {
-    position: absolute;
-    bottom: 8px;
-    border: none;
-    color: white;
-    font-size: 14px;
-    padding: 6px 14px;
-    border-radius: 3px;
+  h2 {
+    font-size: 25px;
+    margin: 30px 0 0 3vw;
   }
   form {
+    padding-top: 30px;
     width: 94vw;
     margin: 0 auto;
+    label {
+      color: lightgrey;
+      font-size: 12px;
+    }
     input {
       width: 100%;
       font-size: 20px;
       border: none;
       border-bottom: 1px solid grey;
       outline: none;
-      color: #3CC47C;
+      color: $main-color;
       -webkit-text-fill-color: black;
       line-height: 35px;
       margin-bottom: 20px;
       &:focus {
-        border-bottom: 1px solid #3CC47C;
+        border-bottom: 1px solid $main-color;
       }
     }
+  }
+  button {
+    border: none;
+    color: white;
+    font-size: 14px;
+    padding: 6px 14px;
+    border-radius: 3px;
+    background-color: $main-color;
   }
 }
