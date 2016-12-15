@@ -173,9 +173,47 @@ button:focus {
 //CHATTOOMS INDEX
 .chatroomsIndex {
   height: calc(100vh - 48px);
+  font-size: 20px;
   h1 {
+    padding-top: 10px;
     font-size: 25px;
-    margin: 10px 0 10px 3vw;
+    margin: 0 0 10px 3vw;
+  }
+  .chatListFlex {
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    height: 30vh;
+    margin: 0 4vw;
+    padding: 3vw;
+    background-color: lighten($main-color, 40%);
+    border-radius: 4px;
+    ul {
+      li {
+        line-height: 50px;
+        div {
+          position: relative;
+          h3 {
+            display: inline-block;
+            margin-left: 10px;
+          }
+          button {
+            display: inline-block;
+            position: absolute;
+            right: 20px;
+          }
+        }
+      }
+      li:nth-child(2n+1) {
+        background-color: lighten($main-color, 20%);
+      }
+    }
+  }
+  button {
+    background: none;
+    border: 1px solid $main-color;
+    border-radius: 50px;
+    padding: 4px 6px;
   }
 }
 

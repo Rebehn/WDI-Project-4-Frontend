@@ -5,6 +5,9 @@
   "authors": [
     "Mike Hayden <mickyginger@gmail.com> (https://github.com/mickyginger)"
   ],
+  "scripts": {
+    "start": "node app"
+  },
   "license": "ISC",
   "homepage": "",
   "ignore": [
