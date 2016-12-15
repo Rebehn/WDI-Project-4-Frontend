@@ -365,3 +365,52 @@ button:focus {
     background-color: #ff6666;
   }
 }
+
+//USERS EDIT
+.usersEdit {
+  height: calc(100vh - 50px);
+  text-align: center;
+  .imageBox {
+    margin: 0 auto;
+    padding-top: 22%;
+    width: 242px;
+    img {
+      border-radius: 50%;
+      // border: 1px #3CC47C solid;
+      width: 240px;
+      height: 240px;
+      object-fit: cover;
+    }
+  }
+  h2 {
+    font-size: 40px;
+    line-height: 60px;
+  }
+  button {
+    position: absolute;
+    bottom: 8px;
+    border: none;
+    color: white;
+    font-size: 14px;
+    padding: 6px 14px;
+    border-radius: 3px;
+  }
+  form {
+    width: 94vw;
+    margin: 0 auto;
+    input {
+      width: 100%;
+      font-size: 20px;
+      border: none;
+      border-bottom: 1px solid grey;
+      outline: none;
+      color: #3CC47C;
+      -webkit-text-fill-color: black;
+      line-height: 35px;
+      margin-bottom: 20px;
+      &:focus {
+        border-bottom: 1px solid #3CC47C;
+      }
+    }
+  }
+}

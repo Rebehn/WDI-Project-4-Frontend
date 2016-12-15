@@ -1,9 +1,14 @@
 <section>
-  <h1>Users Edit</h1>
+  <div class="usersEdit">
+    <div class="imageBox">
+      <img src="{{ usersEdit.user.image }}" alt="Image of {{ usersEdit.user.username}}">
+    </div>
+  	<h2>{{ usersEdit.user.username }}</h2>
 
-  <form ng-submit="usersEdit.submit()">
-    <input ng-model="usersEdit.user.username" placeholder="Username">
-    <button>Update</button>
-  </form>
-
+    <form ng-submit="usersEdit.submit()">
+      <input ng-model="usersEdit.user.username" placeholder="Username">
+      <input ng-model="usersEdit.user.image" placeholder="Image url">
+      <button>Update</button>
+    </form>
+  </div>
 </section>

@@ -48,6 +48,6 @@ function Router($stateProvider, $urlRouterProvider) {
       templateUrl: '/templates/chatroomsShow.html',
       controller: 'ChatroomsShowController as chatroomsShow'
     });
-    
-  $urlRouterProvider.otherwise('/');
+
+  $urlRouterProvider.otherwise('/chatrooms');
 }

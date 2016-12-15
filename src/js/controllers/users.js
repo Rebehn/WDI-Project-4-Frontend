@@ -11,7 +11,7 @@ function UsersIndexController(User, $auth) {
     usersIndex.currentUser = user;
     usersIndex.all = User.query();
   });
-  
+
   function isSelf(user) {
     return user.id === usersIndex.currentUser.id;
   }
@@ -37,4 +37,12 @@ function UsersEditController(User, $state) {
   const usersEdit = this;
 
   usersEdit.user = User.get($state.params);
+
+  function submit() {
+    console.log(usersEdit.user);
+    usersEdit.user.$update(() => {
+      $state.go('usersShow', { id: usersEdit.user.id });
+    });
+  }
+  usersEdit.submit = submit;
 }

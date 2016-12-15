@@ -16,12 +16,13 @@ function ChatroomsIndexController(Chatroom, $auth) {
   chatroomsIndex.hasAccess = hasAccess;
 }
 
-ChatroomsNewController.$inject = ['Chatroom','$state'];
-function ChatroomsNewController(Chatroom, $state) {
+ChatroomsNewController.$inject = ['Chatroom','$state', '$auth'];
+function ChatroomsNewController(Chatroom, $state, $auth) {
   const chatroomsNew = this;
 
   chatroomsNew.chatroom = {};
   function createChatroom() {
+    chatroomsNew.chatroom.allowed_user_ids = [$auth.getPayload().id];
     Chatroom.save(chatroomsNew.chatroom);
     $state.go('chatrooms');
   }
