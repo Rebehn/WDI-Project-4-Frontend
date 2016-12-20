@@ -146,10 +146,12 @@ button:focus {
     font-size: 25px;
     font-weight: bold;
     padding-top: 10px;
+    margin-bottom: 15px;
   }
   .addOrSeeUsers {
     h1 {
       font-size: 18px;
+      clear: both;
     }
     .midBox {
       position: absolute;
@@ -171,6 +173,68 @@ button:focus {
       background-color: lighten($main-color, 30%);
       color: white;
     }
+    .flexNotIn {
+      display: flex;
+      overflow-y: scroll;
+      height: 36vh;
+      width: 100%;
+    }
+    li {
+      float: left;
+      .profileBox {
+        margin-bottom: 0.75vh;
+        margin-left: 3vw;
+        position: relative;
+        a {
+          text-decoration: none;
+          margin-left: 3px;
+          h4 {
+            text-align: center;
+            color: darken($main-color, 20%);
+          }
+          img {
+            border-radius: 50%;
+            // border: 2px solid darken($main-color, 10%);
+            width: 26vw;
+            height: 26vw;
+            object-fit: cover;
+          }
+        }
+        button {
+          position: absolute;
+          border-radius: 50%;
+          border: none;
+          padding: 4px 7px;
+          z-index: 2;
+          background-color: lighten($main-color, 30%);
+          color: white;
+          bottom: 12px;
+        }
+      }
+    }
+    label {
+      color: lightgrey;
+      font-size: 12px;
+    }
+    input {
+      width: 100%;
+      font-size: 20px;
+      border: none;
+      border-bottom: 1px solid grey;
+      outline: none;
+      background-color: lighten($main-color, 45%);
+      color: $main-color;
+      -webkit-text-fill-color: black;
+      line-height: 35px;
+      margin: 0 0 20px 0;
+      position: absolute;
+      bottom: 0;
+      z-index: 4;
+      &:focus {
+        border-bottom: 1px solid $main-color;
+      }
+    }
+
   }
   .messages {
     background-color: lighten($main-color, 45%);

@@ -8,25 +8,32 @@
           <h1>Users in chat</h1>
           <ul>
             <li ng-repeat="user in chatroomsShow.all" ng-if="chatroomsShow.showOnInChatList(user)">
-              {{ user.username }}
-              <button ng-click="chatroomsShow.revokePrivilege(user)" style="background: lime">-</button>
+              <div class="profileBox">
+                <a ui-sref="usersShow({ id: user.id })">
+                  <img src="{{ user.image }}" alt="Image of {{ user.username }}">
+                  <h4>{{ user.username }}</h4>
+                </a>
+              <button ng-click="chatroomsShow.revokePrivilege(user)">-</button>
             </li>
           </ul>
         </div>
 
         <div class="userList">
           <h1>Other Users</h1>
-          <div>
-            <input type="text" ng-model="chatroomsShow.filter.username" placeholder="Search">
+          <div class="flexNotIn">
             <ul>
               <li ng-repeat="user in chatroomsShow.all | filter: chatroomsShow.filter" ng-if="chatroomsShow.showOnAllList(user)">
                 <div class="profileBox">
-                  <a ui-sref="usersShow({ id: user.id })">{{ user.username }}</a>
-                  <button ng-click="chatroomsShow.allowUser(user)" style="background: maroon">+</button>
+                  <a ui-sref="usersShow({ id: user.id })">
+                    <img src="{{ user.image }}" alt="Image of {{ user.username }}">
+                    <h4>{{ user.username }}</h4>
+                  </a>
+                  <button ng-click="chatroomsShow.allowUser(user)">+</button>
                 </div>
               </li>
             </ul>
           </div>
+          <input type="text" ng-model="chatroomsShow.filter.username" placeholder="Search">
         </div>
       </div>
     </div>
