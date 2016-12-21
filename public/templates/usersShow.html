@@ -1,0 +1,12 @@
+<section>
+  <div class="usersShow">
+    <div class="imageBox">
+      <img src="{{ usersShow.user.image }}" alt="Image of {{ usersShow.user.username}}">
+    </div>
+  	<h2>{{ usersShow.user.username }}</h2>
+  	<h4>{{ usersShow.user.email }}</h4>
+
+    <button class="edit" ui-sref="usersEdit({ id: usersShow.user.id })" ng-if="usersShow.isCurrentUser()">Edit</button>
+    <button class="delete" ng-click="usersShow.remove()" ng-if="usersShow.isCurrentUser()">Delete</button>
+  </div>
+</section>
