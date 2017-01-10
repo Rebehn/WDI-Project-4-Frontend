@@ -25,7 +25,7 @@ function MessageController(ActionCableChannel, Message, $scope, User, $auth, $st
   };
   consumer.subscribe(callback).then(function(){
     msg.sendToMyChannel = function(message){
-      const messageData = { body: message, user_id: $auth.getPayload().id, chat_room_id: $state.params.id };
+      const messageData = { body: message, sender: msg.currentUser.username , user_id: $auth.getPayload().id, chat_room_id: $state.params.id};
       Message.save(messageData);
       consumer.send(messageData);
     };

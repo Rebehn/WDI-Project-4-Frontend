@@ -251,7 +251,7 @@ button:focus {
     li {
       .wholeLine {
         width: 94vw;
-        min-height: 39px;
+        padding: 2px;
         display: block;
         .singleMessageBox {
           color: white;
@@ -261,6 +261,7 @@ button:focus {
           border-radius: 6px;
           padding: 7px 10px;
           max-width: 70vw;
+          clear: both;
           float: left;
           h6 {
             font-size: 8px;
@@ -272,9 +273,10 @@ button:focus {
       &.self {
         color: white;
         .singleMessageBox {
-          background-color: $main-color;
+          background-color: lighten($main-color, 10%);
           margin-bottom: 1vh;
           margin-right: 1.5vw;
+          clear: both;
           float: right;
           border-radius: 6px;
           padding: 7px 10px;
