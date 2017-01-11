@@ -1,6 +1,5 @@
 angular.module('finalProject', ['ngResource', 'ui.router', 'satellizer', 'ngActionCable'])
-  .constant('API_URL', window.location.hostname === 'localhost' ? 'http://locahost:3000/api' : 'talkr-app-api.herokuapp.com/api')
-  // .constant('API_URL', 'https://talkr-app-api.herokuapp.com/api')
+  .constant('API_URL', 'https://talkr-app-api.herokuapp.com/api')
   // .constant('API_URL', 'http://localhost:3000/api')
   .config(Auth)
   .run(ActionCable);
