@@ -19,7 +19,7 @@ function MessageController(ActionCableChannel, Message, $scope, User, $auth, $st
 
   msg.myData = Message.query({ chat_room_id: $state.params.id });
   // connect to ActionCable
-  var consumer = new ActionCableChannel('ChatChannel', {user: 42, chat: $state.params.id });
+  var consumer = new ActionCableChannel('ChatChannel', { user: msg.currentUser, chat: $state.params.id });
   var callback = function(message) {
     msg.myData.push(message);
   };
