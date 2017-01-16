@@ -506,21 +506,21 @@ button:focus {
       margin: 0 auto;
       input {
         width: 100%;
-        font-size: 20px;
+        font-size: 4vh;
         border: none;
         border-bottom: 1px solid grey;
         outline: none;
         color: $main-color;
         -webkit-text-fill-color: black;
-        line-height: 35px;
-        margin-bottom: 20px;
+        line-height: 5vh;
+        margin-bottom: 4vh;
         &:focus {
           border-bottom: 1px solid $main-color;
         }
       }
       label {
         color: lightgrey;
-        font-size: 12px;
+        font-size: 2vh;
       }
     }
   }
