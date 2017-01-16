@@ -156,18 +156,19 @@ button:focus {
     .midBox {
       position: absolute;
       z-index: 1;
-      top: 9vh;
+      top: 51px;
       left: 1px;
       width: 93vw;
-      height: calc(100vh - 188px);
+      border-radius: 8px;
+      height: calc(100vh - 170px);
       background-color: lighten($main-color, 45%);
     }
     #showOrHideButton {
       position: absolute;
       right: 3vw;
       top: 8vh;
+      border: 1px darken($main-color, 5%) solid;
       border-radius: 50%;
-      border: none;
       padding: 4px 7px;
       z-index: 2;
       background-color: lighten($main-color, 30%);
@@ -176,8 +177,16 @@ button:focus {
     .flexNotIn {
       display: flex;
       overflow-y: scroll;
-      height: 36vh;
+      height: 20vh;
       width: 100%;
+      padding-top: 2vh;
+    }
+    .chatroomUserList {
+      display: flex;
+      overflow-y: scroll;
+      height: 20vh;
+      width: 100%;
+      padding-top: 2vh;
     }
     li {
       float: left;
@@ -191,12 +200,13 @@ button:focus {
           h4 {
             text-align: center;
             color: darken($main-color, 20%);
+            font-size: 2vh;
           }
           img {
             border-radius: 50%;
-            // border: 2px solid darken($main-color, 10%);
-            width: 26vw;
-            height: 26vw;
+            border: 2px solid darken($main-color, 10%);
+            width: calc(26vw - 2px);
+            height: calc(26vw - 2px);
             object-fit: cover;
           }
         }
@@ -217,7 +227,7 @@ button:focus {
       font-size: 12px;
     }
     input {
-      width: 100%;
+      width: 92%;
       font-size: 20px;
       border: none;
       border-bottom: 1px solid grey;
@@ -225,10 +235,8 @@ button:focus {
       background-color: lighten($main-color, 45%);
       color: $main-color;
       -webkit-text-fill-color: black;
-      line-height: 35px;
-      margin: 0 0 20px 0;
-      position: absolute;
-      bottom: 0;
+      line-height: 25px;
+      margin: 0 0 0 4%;
       z-index: 4;
       &:focus {
         border-bottom: 1px solid $main-color;
@@ -328,7 +336,7 @@ button:focus {
   }
 }
 
-//CHATTOOMS INDEX
+//CHATTROOMS INDEX
 .chatroomsIndex {
   height: calc(100vh - 48px);
   font-size: 3vh;
@@ -676,6 +684,7 @@ button:focus {
     font-size: 14px;
     padding: 6px 14px;
     border-radius: 3px;
+    float: right;
     background-color: $main-color;
   }
 }
