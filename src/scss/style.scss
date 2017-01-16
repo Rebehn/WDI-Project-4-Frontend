@@ -228,7 +228,7 @@ button:focus {
     }
     input {
       width: 92%;
-      font-size: 20px;
+      font-size: 18px;
       border: none;
       border-bottom: 1px solid grey;
       outline: none;
@@ -236,7 +236,7 @@ button:focus {
       color: $main-color;
       -webkit-text-fill-color: black;
       line-height: 25px;
-      margin: 0 0 0 4%;
+      margin: 10px 0 0 4%;
       z-index: 4;
       &:focus {
         border-bottom: 1px solid $main-color;

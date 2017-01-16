@@ -4,8 +4,8 @@
     <div class="addOrSeeUsers">
       <button id="showOrHideButton" ng-if="true" ng-click="chatroomsShow.show = !chatroomsShow.show">+</button>
       <div class="midBox" ng-show="chatroomsShow.show">
-        <h1>Users in chat</h1>
-        <div class="chatroomUserList">
+        <h1 ng-show="!focused">Users in chat</h1>
+        <div class="chatroomUserList" ng-show="!focused">
           <ul>
             <li ng-repeat="user in chatroomsShow.all" ng-if="chatroomsShow.showOnInChatList(user)">
               <div class="profileBox">
@@ -19,7 +19,7 @@
         </div>
 
         <div class="userList">
-          <input type="text" ng-model="chatroomsShow.filter.username" placeholder="Search for users">
+          <input id="userFilterInput" type="text" ng-model="chatroomsShow.filter.username" ng-focus="focused = true" ng-blur="focused = false" placeholder="Search for users">
           <div class="flexNotIn">
             <ul>
               <li ng-repeat="user in chatroomsShow.all | filter: chatroomsShow.filter" ng-if="chatroomsShow.showOnAllList(user)">
