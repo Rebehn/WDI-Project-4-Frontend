@@ -18,6 +18,8 @@ function MessageController(ActionCableChannel, Message, $scope, User, $auth, $st
   msg.isOwnMessage = isOwnMsssage;
 
   msg.myData = Message.query({ chat_room_id: $state.params.id });
+  var messageInputForm = document.getElementById('messageInputForm');
+
   // connect to ActionCable
   var consumer = new ActionCableChannel('ChatChannel', { user: msg.currentUser, chat: $state.params.id });
   var callback = function(message) {
@@ -28,6 +30,7 @@ function MessageController(ActionCableChannel, Message, $scope, User, $auth, $st
       const messageData = { body: message, sender: msg.currentUser.username , user_id: $auth.getPayload().id, chat_room_id: $state.params.id};
       Message.save(messageData);
       consumer.send(messageData);
+      messageInputForm.reset();
     };
     $scope.$on('$destroy', function(){
       consumer.unsubscribe().then(function(){

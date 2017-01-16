@@ -51,7 +51,7 @@
       </ul>
     </div>
 
-    <form class="sendBar" ng-controller="MessageController as message" ng-submit="message.sendToMyChannel(inputText)">
+    <form class="sendBar" id="messageInputForm" ng-controller="MessageController as message" ng-submit="message.sendToMyChannel(inputText)">
       <input ng-model="inputText" placeholder="Type a message">
       <button>Send</button>
     </form>
