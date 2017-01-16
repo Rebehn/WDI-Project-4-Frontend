@@ -326,12 +326,12 @@ button:focus {
 //CHATTOOMS INDEX
 .chatroomsIndex {
   height: calc(100vh - 48px);
-  font-size: 20px;
+  font-size: 3vh;
   background-color: lighten($main-color, 45%);
   h1 {
     padding-top: 4vh;
     font-size: 4vh;
-    margin: 0 0 4vh 3vw;
+    margin: 0 0 3vh 3vw;
   }
   #newChatBtn {
     background-color: lighten($main-color, 15%);
@@ -339,12 +339,11 @@ button:focus {
     border-radius: 6px;
     padding: 6px 2px;
     width: 140px;
-    margin: 12px auto;
+    margin: 2vh auto;
     display: block;
     color: white;
-    font-size: 2vh
+    font-size: 2vh;
   }
-
   .chatListFlex {
     display: flex;
     flex-direction: column;
@@ -356,7 +355,7 @@ button:focus {
     border-radius: 4px;
     ul {
       li {
-        line-height: 50px;
+        line-height: 8vh;
         div {
           position: relative;
           h3 {
