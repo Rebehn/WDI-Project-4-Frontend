@@ -263,10 +263,14 @@ button:focus {
           max-width: 70vw;
           clear: both;
           float: left;
+          font-size: 20px;
+          line-height: 24px;
+
           h6 {
             font-size: 8px;
+            line-height: 8px;
             font-style: italic;
-            color: lightgrey;
+            color: black;
           }
         }
       }
@@ -275,7 +279,7 @@ button:focus {
         .singleMessageBox {
           background-color: lighten($main-color, 10%);
           margin-bottom: 1vh;
-          margin-right: 1.5vw;
+          margin-right: 3vw;
           clear: both;
           float: right;
           border-radius: 6px;
@@ -283,8 +287,9 @@ button:focus {
           max-width: 70vw;
           h6 {
             font-size: 8px;
+            line-height: 8px;
             font-style: italic;
-            color: lightgrey;
+            color: #477556;
           }
         }
       }
