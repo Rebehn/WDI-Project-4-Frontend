@@ -1,7 +1,7 @@
 # WDI-Project-4
 ### Aaron Jeffrey-Hall
 
-You can test the app [here](https://enigmatic-island-64889.herokuapp.com/) <br>
+You can test the app [here](https://talkr-app.herokuapp.com/) <br>
 It works best on mobile.
 
 ##Overview
